@@ -1,15 +1,15 @@
 #!/bin/bash
 
 # ansible
-sudo apt install ansible -y
+sudo -u awkirin apt install ansible -y
 
 # keepassxc
-sudo add-apt-repository ppa:phoerious/keepassxc
-sudo apt update
+sudo add-apt-repository ppa:phoerious/keepassxc -y
+sudo apt update -y
 sudo apt install keepassxc -y
 
 # docker
-sudo sh -c "$(curl -fsSL get.docker.com)"
+sudo -u awkirin sh -c "$(curl -fsSL get.docker.com)"
 systemctl enable docker
 systemctl start docker
 
@@ -54,7 +54,7 @@ sudo -u awkirin /bin/bash -c "$(curl -fsSL raw.githubusercontent.com/awkirin/awk
 
 # end
 apt-get upgrade -y
-apt-get autoremove -y && apt-get clean
+apt-get autoremove -y && apt-get clean -y
 #exit
 
 
