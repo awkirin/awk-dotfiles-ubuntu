@@ -1,0 +1,22 @@
+[user]
+	name = awkirin
+	email = awkirin@gmail.com
+
+[core]
+	sshCommand = C:/Windows/System32/OpenSSH/ssh.exe
+	autocrlf = input
+	quotepath = false
+	excludesFile = ~/.gitignore
+
+[init]
+    defaultbranch = main
+
+[color]
+    ui = auto
+
+[rebase]
+    autosquash = true
+    stat = true
+
+[fetch]
+    prune = true
