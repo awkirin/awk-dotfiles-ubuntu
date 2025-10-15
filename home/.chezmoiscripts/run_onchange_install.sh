@@ -28,7 +28,7 @@ sudo -u awkirin sh -c "$(curl -fsSL install.ohmyz.sh)" "" --unattended
 
 
 echo "lando -------------------------------"
-sudo -u awkirin /bin/bash -c "$(curl -fsSL get.lando.dev/setup-lando.sh) --yes"
+sudo -u awkirin /bin/bash -c "$(curl -fsSL get.lando.dev/setup-lando.sh)" -- --yes
 #lando shellenv --add
 
 echo "jetbrains toolbox -------------------------------"
@@ -57,9 +57,9 @@ sudo -u awkirin /bin/bash -c "$(curl -fsSL raw.githubusercontent.com/awkirin/awk
 
 
 # end
-sudo apt upgrade -y
-sudo apt autoremove -y
-sudo apt apt clean -y
+#sudo apt upgrade -y
+#sudo apt autoremove -y
+#sudo apt apt clean -y
 #exit
 
 
