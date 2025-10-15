@@ -1,17 +1,12 @@
 #!/bin/bash
 
-echo "ansible -------------------------------"
-sudo -u awkirin apt install ansible -y
+#echo "ansible -------------------------------"
+#sudo apt install ansible -y
 
 echo "keepassxc -------------------------------"
 sudo add-apt-repository ppa:phoerious/keepassxc -y
 sudo apt update -y
 sudo apt install keepassxc -y
-
-echo "docker -------------------------------"
-sudo -u awkirin sh -c "$(curl -fsSL get.docker.com)"
-systemctl enable docker
-systemctl start docker
 
 echo "google chrome -------------------------------"
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
@@ -23,6 +18,14 @@ sudo apt-get install google-chrome-stable
 echo "oh-my-zsh -------------------------------"
 sudo apt install zsh -y
 sudo -u awkirin sh -c "$(curl -fsSL install.ohmyz.sh)" "" --unattended
+
+
+
+#echo "docker -------------------------------"
+#sudo -u awkirin sh -c "$(curl -fsSL get.docker.com)"
+#systemctl enable docker
+#systemctl start docker
+
 
 echo "lando -------------------------------"
 sudo -u awkirin /bin/bash -c "$(curl -fsSL get.lando.dev/setup-lando.sh) --yes"
