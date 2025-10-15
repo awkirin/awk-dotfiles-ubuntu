@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # ansible
 sudo apt install ansible -y
 
