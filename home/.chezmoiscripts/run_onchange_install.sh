@@ -22,7 +22,7 @@ sudo apt-get install google-chrome-stable
 
 # oh-my-zsh
 sudo apt install zsh -y
-sudo -u awkirin sh -c "$(curl -fsSL install.ohmyz.sh) --unattended"
+sudo -u awkirin sh -c "$(curl -fsSL install.ohmyz.sh)" -- "" --unattended
 
 # lando
 sudo -u awkirin /bin/bash -c "$(curl -fsSL get.lando.dev/setup-lando.sh) --yes"
@@ -53,8 +53,9 @@ sudo -u awkirin /bin/bash -c "$(curl -fsSL raw.githubusercontent.com/awkirin/awk
 
 
 # end
-apt-get upgrade -y
-apt-get autoremove -y && apt-get clean -y
+sudo apt upgrade -y
+sudo apt autoremove -y
+sudo apt apt clean -y
 #exit
 
 
