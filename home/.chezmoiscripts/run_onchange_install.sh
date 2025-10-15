@@ -26,6 +26,7 @@ sudo -u awkirin sh -c "$(curl -fsSL install.ohmyz.sh)" "" --unattended
 
 echo "lando -------------------------------"
 sudo -u awkirin /bin/bash -c "$(curl -fsSL get.lando.dev/setup-lando.sh) --yes"
+#lando shellenv --add
 
 echo "jetbrains toolbox -------------------------------"
 sudo -u awkirin /bin/bash -c "$(curl -fsSL raw.githubusercontent.com/awkirin/awk-snippets/master/linux/ubuntu/install-jetbrains-toolbox.sh)"
