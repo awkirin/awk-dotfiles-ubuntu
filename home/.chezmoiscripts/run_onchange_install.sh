@@ -1,33 +1,33 @@
 #!/bin/bash
 
-# ansible
+echo "ansible -------------------------------"
 sudo -u awkirin apt install ansible -y
 
-# keepassxc
+echo "keepassxc -------------------------------"
 sudo add-apt-repository ppa:phoerious/keepassxc -y
 sudo apt update -y
 sudo apt install keepassxc -y
 
-# docker
+echo "docker -------------------------------"
 sudo -u awkirin sh -c "$(curl -fsSL get.docker.com)"
 systemctl enable docker
 systemctl start docker
 
-# google chrome
+echo "google chrome -------------------------------"
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
 sudo apt-get update
 sudo apt-get install google-chrome-stable
 
 
-# oh-my-zsh
+echo "oh-my-zsh -------------------------------"
 sudo apt install zsh -y
 sudo -u awkirin sh -c "$(curl -fsSL install.ohmyz.sh)" "" --unattended
 
-# lando
+echo "lando -------------------------------"
 sudo -u awkirin /bin/bash -c "$(curl -fsSL get.lando.dev/setup-lando.sh) --yes"
 
-# jetbrains toolbox
+echo "jetbrains toolbox -------------------------------"
 sudo -u awkirin /bin/bash -c "$(curl -fsSL raw.githubusercontent.com/awkirin/awk-snippets/master/linux/ubuntu/install-jetbrains-toolbox.sh)"
 
   # - | # xrdp
