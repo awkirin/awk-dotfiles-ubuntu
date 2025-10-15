@@ -21,8 +21,8 @@ sudo -u awkirin sh -c "$(curl -fsSL install.ohmyz.sh)" "" --unattended
 
 
 
-#echo "docker -------------------------------"
-#sudo -u awkirin sh -c "$(curl -fsSL get.docker.com)"
+echo "docker -------------------------------"
+sudo -u awkirin sh -c "$(curl -fsSL get.docker.com)"
 #systemctl enable docker
 #systemctl start docker
 
