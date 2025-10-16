@@ -43,10 +43,10 @@ sudo apt-get install -y {{ $packages | join " " }}
 
 {{ if lookPath "snap" }}
 {{   range $snaps }}
-( snap info {{ . }} | grep -q ^installed: ) || {{ $sudo }}snap install {{ . }}
+( snap info {{ . }} | grep -q ^installed: ) || sudo snap install {{ . }}
 {{   end }}
 {{   range $classicSnaps }}
-( snap info {{ . }} | grep -q ^installed: ) || {{ $sudo }}snap install --classic {{ . }}
+( snap info {{ . }} | grep -q ^installed: ) || sudo snap install --classic {{ . }}
 {{   end }}
 {{ end }}
 
