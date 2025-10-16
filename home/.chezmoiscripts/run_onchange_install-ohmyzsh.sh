@@ -21,3 +21,5 @@ if $need_install; then
 fi
 
 sudo -u "${SCRIPT_USER}" sh -c "$(curl -fsSL install.ohmyz.sh)" "" --unattended
+
+sudo chsh -s /usr/bin/zsh awkirin
