@@ -25,8 +25,3 @@ if $need_install; then
 fi
 
 NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-
-echo >> /home/awkirin/.bashrc
-echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/awkirin/.bashrc
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
