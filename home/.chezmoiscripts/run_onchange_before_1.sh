@@ -1,3 +1,3 @@
 #!/bin/bash
 set -eufo pipefail
-source ~/_global.sh
+source "${HOME}/.local/share/chezmoi/home/.chezmoiscripts/_global.sh"
