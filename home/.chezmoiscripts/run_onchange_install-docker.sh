@@ -1,9 +1,10 @@
 #!/bin/bash
 set -euo pipefail
 
-if [[ -n $(command -v docker) ]]; then
-    echo "Docker is already installed"
-    exit 0
+TOOL_NAME="docker"
+if command -v "${TOOL_NAME}" >/dev/null 2>&1; then
+    echo "${TOOL_NAME} is already installed"
+    return 0 2>/dev/null || exit 0
 fi
 
 # deps

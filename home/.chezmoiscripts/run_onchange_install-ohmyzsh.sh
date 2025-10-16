@@ -1,7 +1,23 @@
 #!/bin/bash
+set -euo pipefail
 
-sudo apt-get -y install zsh
+SCRIPT_USER="${SCRIPT_USER:-"awkirin"}"
 
-CHSH='no' RUNZSH='no' sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+# deps
+deps=(
+  curl
+  zsh
+)
+need_install=false
+for pkg in "${deps[@]}"; do
+    if ! dpkg -l | grep -q " $pkg "; then
+        need_install=true
+        break
+    fi
+done
+if $need_install; then
+    sudo apt update
+    sudo apt install -y "${deps[@]}"
+fi
 
-chsh -s "$(which zsh)" "$USER"
+sudo -u "${SCRIPT_USER}" sh -c "$(curl -fsSL install.ohmyz.sh)" "" --unattended
