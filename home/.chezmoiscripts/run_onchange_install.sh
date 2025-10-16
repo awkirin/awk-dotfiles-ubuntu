@@ -1,23 +1,13 @@
 #!/bin/bash
 set -eufo pipefail
 
-echo "bat -------------------------------"
-sudo apt install bat -y
 
 
-#echo "ansible -------------------------------"
-#sudo apt install ansible -y
 
 
-echo "docker -------------------------------"
-sudo -u awkirin sh -c "$(curl -fsSL get.docker.com)"
 
-echo "lando -------------------------------"
-sudo -u awkirin /bin/bash -c "$(curl -fsSL get.lando.dev/setup-lando.sh)" -- --yes
-#lando shellenv --add
-
-echo "jetbrains toolbox -------------------------------"
-sudo -u awkirin /bin/bash -c "$(curl -fsSL raw.githubusercontent.com/awkirin/awk-snippets/master/linux/ubuntu/install-jetbrains-toolbox.sh)"
+#echo "jetbrains toolbox -------------------------------"
+#sudo -u awkirin /bin/bash -c "$(curl -fsSL raw.githubusercontent.com/awkirin/awk-snippets/master/linux/ubuntu/install-jetbrains-toolbox.sh)"
 
   # - | # xrdp
   # sudo apt install xrdp -y

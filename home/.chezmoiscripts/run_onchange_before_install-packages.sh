@@ -3,6 +3,7 @@ set -eufo pipefail
 
 # deps
 deps=(
+  "ansible"
   "bat"
   "build-essential"
   "curl"
