@@ -1,3 +1,4 @@
 #!/bin/bash
 set -eufo pipefail
-echo 234234234234234234234
+TEST=345345345345545
+echo $TEST
