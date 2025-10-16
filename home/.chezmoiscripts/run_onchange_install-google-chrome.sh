@@ -17,7 +17,7 @@ deps=(
 )
 need_install=false
 for pkg in "${deps[@]}"; do
-    if ! dpkg -l | grep -q " $pkg "; then
+    if ! dpkg -s "$pkg" >/dev/null 2>&1; then
         need_install=true
         break
     fi

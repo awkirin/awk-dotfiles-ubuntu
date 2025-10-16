@@ -14,22 +14,22 @@ deps=(
   zsh
   ansible
   build-essential
-  fd-find
-  fzf
-  git-lfs
-  libfuse2
-  openssh-server
-  ripgrep
-  shellcheck
-  units
-  xclip
-  musl-tools
-  gdal-bin
-  libgeos-dev
-  libproj-dev
-  postgis
-  postgresql
-  qgis
+  #fd-find
+  #fzf
+  #git-lfs
+  #libfuse2
+  #openssh-server
+  #ripgrep
+  #shellcheck
+  #units
+  #xclip
+  #musl-tools
+  #gdal-bin
+  #libgeos-dev
+  #libproj-dev
+  #postgis
+  #postgresql
+  #qgis
 )
 for pkg in "${deps[@]}"; do
     if apt list --installed 2>/dev/null | grep -q "^$pkg/"; then
