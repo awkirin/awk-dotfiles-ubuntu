@@ -1,9 +1,12 @@
 #!/bin/bash
+set -euo pipefail
 # https://code.visualstudio.com/docs/setup/linux
 # sudo /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/awkirin/awk-snippets/main/install-docker-engine.sh)"
 
-
-set -eufo pipefail
+if command -v code >/dev/null 2>&1; then
+    echo "VS Code is already installed"
+    return 0 2>/dev/null || exit 0
+fi
 
 # Install dependencies if missing
 if ! command -v wget >/dev/null 2>&1 || ! command -v gpg >/dev/null 2>&1; then
@@ -32,11 +35,5 @@ EOF
 fi
 
 # Install VS Code if not installed
-if ! command -v code >/dev/null 2>&1; then
-    echo "Installing VS Code..."
-    sudo apt install code -y
-else
-    echo "VS Code is already installed"
-fi
-
+sudo apt install code -y
 echo "VS Code setup completed"
