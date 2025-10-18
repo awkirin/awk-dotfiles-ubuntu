@@ -1,6 +1,8 @@
 #!/bin/bash
 set -euo pipefail
 
+{{ if not (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
+
 TOOL_NAME="docker"
 if command -v "${TOOL_NAME}" >/dev/null 2>&1; then
     echo "${TOOL_NAME} is already installed"
@@ -52,3 +54,5 @@ fi
 sudo usermod -aG docker "${USER}"
 
 echo "Docker installed"
+
+{{ end }}
