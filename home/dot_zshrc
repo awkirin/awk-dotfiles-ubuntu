@@ -113,7 +113,7 @@ fi
 
 
 source "${HOME}/.jetbrains.vmoptions.sh"
-alias phpstorm="${HOME}/.local/share/JetBrains/Toolbox/apps/phpstorm/bin/phpstorm.sh"
+alias phpstorm="${HOME}/.local/share/JetBrains/Toolbox/apps/phpstorm/bin/phpstorm"
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 export PATH="/home/awkirin/.lando/bin:$PATH"; #landopath
