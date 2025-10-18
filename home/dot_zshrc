@@ -111,5 +111,8 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
+
+alias phpstorm="${HOME}/.local/share/JetBrains/Toolbox/apps/phpstorm/bin/phpstorm"
+
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 export PATH="/home/awkirin/.lando/bin:$PATH"; #landopath
