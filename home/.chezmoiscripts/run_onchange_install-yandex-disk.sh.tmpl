@@ -1,0 +1,23 @@
+#!/bin/bash
+
+{{ if not (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
+
+TOOL_NAME="yandex-disk"
+if command -v "${TOOL_NAME}" >/dev/null 2>&1; then
+    echo "${TOOL_NAME} is already installed"
+    return 0 2>/dev/null || exit 0
+fi
+
+if [[ ! -f "/etc/apt/sources.list.d/yandex-disk.list" ]]; then
+  echo "deb [signed-by=/usr/share/keyrings/yandex.gpg] http://repo.yandex.ru/yandex-disk/deb/ stable main" | sudo tee /etc/apt/sources.list.d/yandex-disk.list
+fi
+
+if [[ ! -f "/usr/share/keyrings/yandex.gpg" ]]; then
+  wget -qO- http://repo.yandex.ru/yandex-disk/YANDEX-DISK-KEY.GPG | gpg --dearmor | sudo tee /usr/share/keyrings/yandex.gpg > /dev/null
+  sudo apt update
+fi
+
+sudo apt install "${TOOL_NAME}" -y
+echo "${TOOL_NAME} installed"
+
+{{ end }}
